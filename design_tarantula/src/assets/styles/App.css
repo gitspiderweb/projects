@@ -231,10 +231,44 @@ footer a:focus {
     margin-bottom: 10px;
 }
 
-.About .responsive-image {
-    max-height: 520px;
-    width: auto;
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
 }
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+
+@media screen and (min-width: 576px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 
 
 /* Button Styles */
@@ -247,13 +281,18 @@ footer a:focus {
 
 /* Pages styling */
 /* About section */
-.About .button-group {
-    display: flex;
-}
 
 .About .column-left {
     text-align: justify;
 }
+
+.About .responsive-image {
+    max-height: 520px;
+    width: auto;
+}
+
+
+
 
 /* media query */
 @media screen and (max-width:768px) {
