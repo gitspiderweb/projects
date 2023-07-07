@@ -1,0 +1,16 @@
+.row-standard {
+    width: 80%;
+    margin: 0 auto 60px;
+}
+
+.row-standard p {
+    font-size: 16px;
+}
+
+.row-standard p {
+    margin-bottom: 10px;
+}
+
+.margin-top-60 {
+    margin-top: 60px;
+}

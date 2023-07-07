@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import styles from './FeatureHeader.module.css';
 
 const FeatureHeader = ({ scrollToTwoColumnLayout }) => {
     const [zoomed, setZoomed] = useState(false);
@@ -14,16 +15,16 @@ const FeatureHeader = ({ scrollToTwoColumnLayout }) => {
     }, [zoomed]);
 
     return (
-        <div className='feature-header'>
-            <div className={`background-image ${zoomed ? 'zoomed' : ''}`}>
-                <div className="overlay"></div>
+        <div className={styles.featureHeader}>
+            <div className={`${styles.backgroundImage} ${zoomed ? styles.zoomed : ''}`}>
+                <div className={styles.overlay}></div>
             </div>
-            <header className='content' >
+            <header className={styles.content}>
                 <h1>Hi, I'm Mark</h1>
                 <p>web developer and graphic designer</p>
                 <FontAwesomeIcon
                     icon={faChevronDown}
-                    className='chevron-down'
+                    className={styles.chevronDown}
                     onClick={scrollToTwoColumnLayout}
                 />
             </header>
@@ -32,4 +33,3 @@ const FeatureHeader = ({ scrollToTwoColumnLayout }) => {
 };
 
 export default FeatureHeader;
-

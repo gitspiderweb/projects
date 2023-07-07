@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import styles from './Nav.module.css';
 
 const Nav = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 0) {
@@ -19,17 +21,16 @@ const Nav = () => {
         };
     }, []);
 
-
     return (
-        <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-            <ul>
+        <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
+            <ul className={styles.navbarList}>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-    )
-}
+    );
+};
 
-export default Nav
+export default Nav;

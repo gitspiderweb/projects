@@ -2,11 +2,20 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom'
 // Components
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
+import Nav from './components/Nav/Nav';
+import Footer from './components/Footer/Footer';
 //Styling
 import './assets/styles/App.css';
 //Resources
 import profileImg from './assets/img/cabatuan_mark.jpg'
+import design1 from './assets/designwork/tarp_design2.jpg'
+import design2 from './assets/designwork/tarp_design1.jpg'
+import design3 from './assets/designwork/advert.jpg'
+import design4 from './assets/designwork/tea_tas.png'
+import design5 from './assets/designwork/flo_water.png'
+import design6 from './assets/designwork/stoney.jpg'
+
 
 
 function App() {
@@ -19,6 +28,29 @@ function App() {
       title: `Item ${index + 1}`,
       image: image,
     }));
+
+  const printMedia = [
+    {
+      image: design1
+    },
+    {
+      image: design2
+    },
+    {
+      image: design3
+    }
+  ]
+  const logos = [
+    {
+      image: design4
+    },
+    {
+      image: design5
+    },
+    {
+      image: design6
+    }
+  ]
 
 
 
@@ -37,11 +69,13 @@ function App() {
   };
 
   return (
-
-    <Routes>
-      <Route path="/" element={<Home content={content} />}>
-      </Route>
-    </Routes>
+    <>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home content={content} />} />
+      </Routes>
+      <Footer />
+    </>
 
   );
 }
