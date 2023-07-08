@@ -1,26 +1,3 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-    line-height: 1.5rem;
-}
-
-h1,
-h2 {
-    margin-bottom: 20px;
-}
-
-p {
-    line-height: 1.2rem;
-}
-
-html {
-    font-size: 20px;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-
 .homePage {
     display: flex;
     flex-flow: column;
@@ -33,12 +10,4 @@ body {
 
 .textCenter {
     text-align: center;
-}
-
-.column {
-    padding: 0 30px;
-}
-
-.designWork {
-    background: #000;
 }

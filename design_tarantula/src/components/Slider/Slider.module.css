@@ -1,7 +1,11 @@
+.sliderContainer {
+    margin: -15px;
+}
+
 .slide {
     display: flex;
     justify-content: center;
-    padding-right: 20px;
+    padding: 0 15px;
 }
 
 .slideContent {
@@ -9,5 +13,5 @@
     justify-content: center;
     align-items: center;
     background-color: #f2f2f2;
-    height: 200px;
+    height: 250px;
 }

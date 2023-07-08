@@ -7,7 +7,7 @@ import coe from '../../assets/files/coe.pdf';
 import udemy from '../../assets/files/udemy.pdf';
 import FeatureHeader from '../../components/FeatureHeader/FeatureHeader';
 import styles from './Home.module.css';
-import MySlider from '../../components/Slider/MySlider'
+import ListSlider from '../../components/Slider/ListSlider';
 
 const Home = ({ content }) => {
     const twoColumnRef = useRef(null);
@@ -18,47 +18,48 @@ const Home = ({ content }) => {
 
     return (
         <div className={styles.homePage}>
-            <FeatureHeader scrollToTwoColumnLayout={scrollToTwoColumn} />
+            <FeatureHeader
+                backgroundImage={content.featureImage}
+                heading="Hi, I'm Mark"
+                subheading="web developer and graphic designer"
+                scrollToTwoColumnLayout={scrollToTwoColumn}
+            />
             <div ref={twoColumnRef}>
-                <RowStandard section="About" marginTop60>
-                    <TwoColumn
-                        leftColumn={
-                            <div className={styles.column}>
-                                <h1>About</h1>
-                                <div className={styles.textJustify}>
-                                    {content.section1.bio.map((paragraph, index) => (
-                                        <p key={index}>{paragraph}</p>
-                                    ))}
-                                </div>
-                                <p className={styles.textCenter}>
-                                    <a href={resume} target="_blank" rel="noopener noreferrer">
-                                        Resume
-                                    </a>
-                                    {' | '}
-                                    <a href={udemy} target="_blank" rel="noopener noreferrer">
-                                        Udemy Certificate
-                                    </a>
-                                    {' | '}
-                                    <a href={coe} target="_blank" rel="noopener noreferrer">
-                                        Certificate of Employment
-                                    </a>
-                                </p>
-                            </div>
-                        }
-                        rightColumn={
-                            <div className={styles.column}>
-                                <Image imageUrl={content.section1.profileImg} maxHeight="520px" />
-                            </div>
-                        }
-                    />
+                <RowStandard section="design-work" marginTop60>
+                    <h1>Design Works</h1>
+                </RowStandard>
+                <RowStandard>
+                    <ListSlider items={content.section2.items} />
                 </RowStandard>
             </div>
-            <RowStandard section="design-work">
-                <h1>Design Works</h1>
+            <RowStandard />
+            <RowStandard section="About" marginTop60 colored>
+                <TwoColumn
+                    leftColumn={
+                        <div className={styles.column}>
+                            <h1>About</h1>
+                            <div className={styles.textJustify}>
+                                {content.section1.bio.map((paragraph, index) => (
+                                    <p key={index}>{paragraph}</p>
+                                ))}
+                            </div>
+                            <p className={styles.textCenter}>
+                                <a href={resume} target="_blank" rel="noopener noreferrer">Resume</a>
+                                {' | '}
+                                <a href={udemy} target="_blank" rel="noopener noreferrer">Udemy Certificate</a>
+                                {' | '}
+                                <a href={coe} target="_blank" rel="noopener noreferrer">Certificate of Employment</a>
+                            </p>
+                        </div>
+                    }
+                    rightColumn={
+                        <div className={styles.column}>
+                            <Image imageUrl={content.section1.profileImg} maxHeight="520px" />
+                        </div>
+                    }
+                />
             </RowStandard>
-            <RowStandard>
-                <MySlider items={content.section2.items} />
-            </RowStandard>
+
         </div>
     );
 };
