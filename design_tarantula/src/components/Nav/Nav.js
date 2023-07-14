@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Nav.module.css';
 
 const Nav = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,13 +23,50 @@ const Nav = () => {
         };
     }, []);
 
+    const isActivePage = (pathname) => {
+        if (pathname === "/") {
+            return location.pathname === "/";
+        }
+        return (
+            location.pathname === pathname ||
+            location.pathname.startsWith(`${pathname}/`)
+        );
+    };
     return (
         <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
             <ul className={styles.navbarList}>
-                <li><a href="/">Home</a></li>
-                <li><a href="projects">Projects</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li>
+                    <Link
+                        to="/"
+                        className={isActivePage('/') ? styles.activeLink : ''}
+                    >
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/projects"
+                        className={isActivePage('/projects') ? styles.activeLink : ''}
+                    >
+                        Projects
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/services"
+                        className={isActivePage('/services') ? styles.activeLink : ''}
+                    >
+                        Services
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/contact"
+                        className={isActivePage('/contact') ? styles.activeLink : ''}
+                    >
+                        Contact
+                    </Link>
+                </li>
             </ul>
         </nav>
     );

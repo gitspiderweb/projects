@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './RowStandard.module.css';
+import styles from './RowOffsetMd.module.css';
 
-const RowStandard = ({ section, children, marginTop60, marginBottom0, colored }) => {
+const RowOffsetMd = ({ section, children, marginTop60, marginBottom0, colored }) => {
 
     const container = `${colored ? styles.colored : styles.white}`;
     const containerInner = `${styles['container-inner']} ${marginTop60 ? styles['margin-top-60'] : ''} ${marginBottom0 ? styles['margin-bottom-0'] : ''}`;
@@ -15,4 +15,4 @@ const RowStandard = ({ section, children, marginTop60, marginBottom0, colored })
     );
 };
 
-export default RowStandard;
+export default RowOffsetMd;

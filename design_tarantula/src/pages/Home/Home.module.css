@@ -2,12 +2,3 @@
     display: flex;
     flex-flow: column;
 }
-
-
-.textJustify {
-    text-align: justify;
-}
-
-.textCenter {
-    text-align: center;
-}

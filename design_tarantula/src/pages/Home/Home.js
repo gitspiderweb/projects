@@ -24,26 +24,21 @@ const Home = ({ content }) => {
                 subheading="web developer and graphic designer"
                 scrollToTwoColumnLayout={scrollToTwoColumn}
             />
+
             <div ref={twoColumnRef}>
-                <RowStandard section="design-work" marginTop60>
-                    <h1>Design Works</h1>
-                </RowStandard>
-                <RowStandard>
-                    <ListSlider items={content.section2.items} />
-                </RowStandard>
+                <RowStandard />
             </div>
-            <RowStandard />
-            <RowStandard section="About" marginTop60 colored>
+            <RowStandard section="About">
                 <TwoColumn
                     leftColumn={
                         <div className={styles.column}>
                             <h1>About</h1>
-                            <div className={styles.textJustify}>
-                                {content.section1.bio.map((paragraph, index) => (
+                            <div className="text-justify">
+                                {content.about.bio.map((paragraph, index) => (
                                     <p key={index}>{paragraph}</p>
                                 ))}
                             </div>
-                            <p className={styles.textCenter}>
+                            <p className="text-center">
                                 <a href={resume} target="_blank" rel="noopener noreferrer">Resume</a>
                                 {' | '}
                                 <a href={udemy} target="_blank" rel="noopener noreferrer">Udemy Certificate</a>
@@ -54,11 +49,20 @@ const Home = ({ content }) => {
                     }
                     rightColumn={
                         <div className={styles.column}>
-                            <Image imageUrl={content.section1.profileImg} maxHeight="520px" />
+                            <Image imageUrl={content.about.profileImg} maxHeight="520px" />
                         </div>
                     }
                 />
             </RowStandard>
+
+            <RowStandard section="design-work" >
+                <h1>Design Works</h1>
+            </RowStandard>
+            <RowStandard>
+                <ListSlider items={content.projects} />
+            </RowStandard>
+            <RowStandard />
+
 
         </div>
     );

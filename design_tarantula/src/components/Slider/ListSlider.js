@@ -4,6 +4,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './Slider.module.css';
 import Image from '../Image/Image';
+import { Link } from 'react-router-dom';
+
 
 const ListSlider = ({ items }) => {
     const settings = {
@@ -30,16 +32,21 @@ const ListSlider = ({ items }) => {
         ],
     };
 
+
     return (
         <div className={styles.sliderContainer}>
             <div className={styles.sliderWrapper}>
                 <Slider {...settings}>
                     {items.map((item) => (
-                        <div key={item.id} className={styles.slide}>
+                        <Link
+                            key={item.id}
+                            to={`/projects/${item.id}`}
+                            className={styles.slide}
+                        >
                             <div className={styles.slideContent}>
                                 <Image imageUrl={item.image} />
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </Slider>
             </div>
