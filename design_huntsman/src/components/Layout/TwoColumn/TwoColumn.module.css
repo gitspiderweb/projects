@@ -1,0 +1,27 @@
+.two-column {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    max-width: 50%;
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width:768px) {
+    .two-column {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .two-column .column {
+        max-width: 100%;
+    }
+}
