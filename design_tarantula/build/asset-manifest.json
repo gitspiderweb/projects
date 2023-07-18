@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7b4bccdf.css",
+    "main.js": "/static/js/main.95965721.js",
+    "static/media/spider.jpeg": "/static/media/spider.b49bbfa0182753683f0d.jpeg",
+    "static/media/tarp_design1.jpg": "/static/media/tarp_design1.b0647b292d81d527efd3.jpg",
+    "static/media/tarp_design2.jpg": "/static/media/tarp_design2.5d5b4eeebda76ee5bf1b.jpg",
+    "static/media/mac.jpg": "/static/media/mac.37f9618ac10afa3bfcdd.jpg",
+    "static/media/advert.jpg": "/static/media/advert.907db03b741f48352f7f.jpg",
+    "static/media/coe.pdf": "/static/media/coe.a081f5b142ff69c2d1b8.pdf",
+    "static/media/cabatuan_mark.jpg": "/static/media/cabatuan_mark.0c0c59747ebab477216f.jpg",
+    "static/media/udemy.pdf": "/static/media/udemy.d32b4614d50873a565ca.pdf",
+    "static/media/stoney.jpg": "/static/media/stoney.ce3916e08d468b18da10.jpg",
+    "static/media/resume.pdf": "/static/media/resume.f8aa6faf7be776208aae.pdf",
+    "static/media/tea_tas.png": "/static/media/tea_tas.69fc3d0c043f849810d3.png",
+    "static/media/flo_water.png": "/static/media/flo_water.65cfe3cfe8fac23beb68.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.7b4bccdf.css.map": "/static/css/main.7b4bccdf.css.map",
+    "main.95965721.js.map": "/static/js/main.95965721.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b4bccdf.css",
+    "static/js/main.95965721.js"
+  ]
+}

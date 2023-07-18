@@ -51,22 +51,6 @@ const Nav = () => {
                         Projects
                     </Link>
                 </li>
-                <li>
-                    <Link
-                        to="/services"
-                        className={isActivePage('/services') ? styles.activeLink : ''}
-                    >
-                        Services
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to="/contact"
-                        className={isActivePage('/contact') ? styles.activeLink : ''}
-                    >
-                        Contact
-                    </Link>
-                </li>
             </ul>
         </nav>
     );
